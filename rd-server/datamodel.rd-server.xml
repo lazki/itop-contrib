@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<!-- En este modulo redefinimos la Clase Server agregandole los atributos base-unit(unidad base) y el atributo storage (almacenamiento)-->
+  <classes>
+<!-- Definicion de la Clase-->
+    <class id="Server">
+      <fields>
+	<!-- Aqui creo "_delta="define" el atributo base-unit del tipo AttributeEnum-->
+        <field id="base-unit" xsi:type="AttributeEnum" _delta="define">
+          <values>
+            <value>1</value>
+            <value>2</value>
+	        <value>3</value>
+            <value>4</value>
+            <value>5</value>
+            <value>6</value>
+            <value>7</value>
+            <value>8</value>
+            <value>9</value>
+            <value>10</value>
+            <value>11</value>
+            <value>12</value>
+            <value>13</value>
+            <value>14</value>
+            <value>15</value>
+            <value>16</value>
+            <value>17</value>
+            <value>18</value>
+            <value>19</value>
+            <value>20</value>
+            <value>21</value>
+            <value>22</value>
+            <value>23</value>
+            <value>24</value>
+	        <value>25</value>
+            <value>26</value>
+            <value>27</value>
+            <value>28</value>
+            <value>29</value>
+            <value>30</value>
+            <value>31</value>
+            <value>32</value>
+            <value>33</value>
+            <value>34</value>
+            <value>35</value>
+            <value>36</value>
+            <value>37</value>
+            <value>38</value>
+            <value>39</value>
+            <value>40</value>
+            <value>41</value>
+            <value>42</value>
+          </values>
+          <sql>base-unit</sql><!-- Como se va a llamar el campo en la base de datos-->
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed><!-- Permito valores nulos-->
+        </field>
+	<!-- Aqui agrego "_delta="define" el atributo storage del tipo AttributeText-->
+         <field id="storage" xsi:type="AttributeString" _delta="define">
+             <sql>storage</sql><!-- Como se va a llamar el campo en la base de datos-->
+              <is_null_allowed>true</is_null_allowed> <!-- Permito valores nulos-->
+          <default_value/>
+          </field>
+      </fields>
+      <presentation> <!-- Como y en que orden se van a mostrar los campos en la interfaz-->
+        <details _delta="redefine">
+          <items>
+            <item id="softwares_list">
+              <rank>10</rank>
+            </item>
+            <item id="contacts_list">
+              <rank>20</rank>
+            </item>
+            <item id="documents_list">
+              <rank>30</rank>
+            </item>
+            <item id="tickets_list">
+              <rank>40</rank>
+            </item>
+            <item id="physicalinterface_list">
+              <rank>50</rank>
+            </item>
+            <item id="fiberinterfacelist_list">
+              <rank>60</rank>
+            </item>
+            <item id="networkdevice_list">
+              <rank>70</rank>
+            </item>
+            <item id="san_list">
+              <rank>80</rank>
+            </item>
+            <item id="logicalvolumes_list">
+              <rank>90</rank>
+            </item>
+            <item id="providercontracts_list">
+              <rank>100</rank>
+            </item>
+            <item id="services_list">
+              <rank>110</rank>
+            </item>
+            <item id="col:col1">
+              <rank>120</rank>
+              <items>
+                <item id="fieldset:Server:baseinfo">
+                  <rank>10</rank>
+                  <items>
+                    <item id="name">
+                      <rank>10</rank>
+                    </item>
+                    <item id="org_id">
+                      <rank>20</rank>
+                    </item>
+                    <item id="status">
+                      <rank>30</rank>
+                    </item>
+                    <item id="business_criticity">
+                      <rank>40</rank>
+                    </item>
+                    <item id="location_id">
+                      <rank>50</rank>
+                    </item>
+                    <item id="rack_id">
+                      <rank>60</rank>
+                    </item>
+                    <item id="base-unit">
+                      <rank>70</rank>
+                    </item>
+                    <item id="enclosure_id">
+                      <rank>80</rank>
+                    </item>
+                  </items>
+                </item>
+                <item id="fieldset:Server:moreinfo">
+                  <rank>20</rank>
+                  <items>
+                    <item id="brand_id">
+                      <rank>10</rank>
+                    </item>
+                    <item id="model_id">
+                      <rank>20</rank>
+                    </item>
+                    <item id="osfamily_id">
+                      <rank>30</rank>
+                    </item>
+                    <item id="osversion_id">
+                      <rank>40</rank>
+                    </item>
+                    <item id="oslicence_id">
+                      <rank>50</rank>
+                    </item>
+                    <item id="cpu">
+                      <rank>60</rank>
+                    </item>
+                    <item id="ram">
+                      <rank>70</rank>
+                    </item>
+                     <item id="storage">
+                      <rank>80</rank>
+                    </item>
+                    <item id="nb_u">
+                      <rank>90</rank>
+                    </item>
+                    <item id="serialnumber">
+                      <rank>100</rank>
+                    </item>
+                    <item id="asset_number">
+                      <rank>110</rank>
+                    </item>
+                  </items>
+                </item>
+              </items>
+            </item>
+            <item id="col:col2">
+              <rank>130</rank>
+              <items>
+                <item id="fieldset:Server:Date">
+                  <rank>10</rank>
+                  <items>
+                    <item id="move2production">
+                      <rank>10</rank>
+                    </item>
+                    <item id="purchase_date">
+                      <rank>20</rank>
+                    </item>
+                    <item id="end_of_warranty">
+                      <rank>30</rank>
+                    </item>
+                  </items>
+                </item>
+                <item id="fieldset:Server:otherinfo">
+                  <rank>20</rank>
+                  <items>
+                    <item id="powerA_id">
+                      <rank>10</rank>
+                    </item>
+                    <item id="powerB_id">
+                      <rank>20</rank>
+                    </item>
+                    <item id="description">
+                      <rank>30</rank>
+                    </item>
+                  </items>
+                </item>
+              </items>
+            </item>
+          </items>
+        </details>
+      </presentation>
+    </class>
+  </classes>
+</itop_design>
