@@ -8,3 +8,7 @@ monitor - Módulo que agrega la gestión de monitores. Tomado del ejemplo de per
 scanner - Módulo que permite gestionar este periférico dentro de iTop.
 
 stabilizerups - Módulo para gestionar elementos de energía del escritorio.
+
+nc-radiotetra - Nueva Clase de EC para dispositivos de comunicaciones Tetra.
+
+rd-server - Modificaciones a la EC Server para contemplar unidad de rackeo y almacenamiento local.
